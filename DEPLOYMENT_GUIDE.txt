@@ -1,0 +1,263 @@
+# 🚀 دليل الرفع على GitHub + Railway
+# خطوة بخطوة بالتفصيل الممل
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PART 1 — تجهيز المشروع على جهازك
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## الخطوة 1 — تأكد إن Git متثبت
+
+افتح CMD أو Terminal واكتب:
+
+    git --version
+
+لو ظهر "git version 2.x.x" → تمام
+لو ظهر "not recognized" → حمّله من: https://git-scm.com/downloads
+بعد التثبيت أغلق CMD وافتحه تاني.
+
+
+## الخطوة 2 — روح لفولدر المشروع
+
+    cd C:\Users\YourName\blood_chatbot_hybrid
+
+
+## الخطوة 3 — تأكد إن الفولدر فيه الملفات دي
+
+    blood_chatbot_hybrid/
+    ├── main.py
+    ├── requirements.txt
+    ├── Procfile
+    ├── railway.json
+    ├── .gitignore
+    ├── .env.example
+    ├── models/
+    │   ├── __init__.py
+    │   ├── intent_classifier.py
+    │   ├── eligibility_engine.py
+    │   ├── response_generator.py
+    │   ├── gemini_service.py
+    │   └── hybrid_router.py
+    ├── data/
+    │   ├── __init__.py
+    │   └── training_data.py
+    └── utils/
+        ├── __init__.py
+        └── conversation_store.py
+
+⚠️  تأكد إن ملف .env مش موجود (لو موجود امسحه — محدش يشوف الـ API keys)
+
+
+## الخطوة 4 — ابدأ Git في المشروع
+
+    git init
+
+هيظهر: "Initialized empty Git repository"
+
+
+## الخطوة 5 — أضف كل الملفات
+
+    git add .
+
+(النقطة دي معناها "كل الملفات")
+
+
+## الخطوة 6 — عمل أول Commit
+
+    git commit -m "Initial commit - Blood Donation AI Chatbot Hybrid v2.0"
+
+هيظهر قائمة بالملفات اللي اتضافت — ده طبيعي.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PART 2 — رفع المشروع على GitHub
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## الخطوة 7 — عمل GitHub Account
+
+لو مش عندك account:
+1. روح https://github.com
+2. اضغط "Sign up"
+3. اعمل account مجاني
+
+
+## الخطوة 8 — عمل Repository جديد على GitHub
+
+1. بعد ما تسجل دخول، اضغط الـ "+" في الأعلى يمين
+2. اختر "New repository"
+3. في "Repository name" اكتب: blood-donation-chatbot
+4. اختر "Private" (عشان الكود مش يتشاف من الناس)
+5. لا تضيف README أو .gitignore (عندك بالفعل)
+6. اضغط "Create repository"
+
+
+## الخطوة 9 — اربط المشروع بالـ Repository
+
+بعد ما تعمل الـ repo، هتشوف صفحة فيها commands.
+خد الـ URL بتاع الـ repo (هيكون زي):
+https://github.com/YourUsername/blood-donation-chatbot.git
+
+اكتب في CMD:
+
+    git remote add origin https://github.com/YourUsername/blood-donation-chatbot.git
+    git branch -M main
+    git push -u origin main
+
+هيطلب منك Username وPassword:
+- Username: اسمك على GitHub
+- Password: مش الـ password العادي — محتاج "Personal Access Token"
+
+
+## الخطوة 10 — عمل Personal Access Token (مطلوب للـ push)
+
+1. روح https://github.com/settings/tokens
+2. اضغط "Generate new token (classic)"
+3. في "Note" اكتب: railway-deploy
+4. في "Expiration" اختر "90 days"
+5. في Scopes ضع علامة على "repo" بالكامل
+6. اضغط "Generate token"
+7. انسخ الـ Token (بيظهر مرة واحدة بس!)
+
+الـ Token هيبدأ بـ: ghp_xxxxxxxxxxxx
+
+لما يطلب منك Password في CMD، الصق الـ Token ده بدل الـ Password.
+
+
+## الخطوة 11 — تأكد إن الرفع نجح
+
+روح على:
+https://github.com/YourUsername/blood-donation-chatbot
+
+لو شفت الملفات → تمام! المشروع على GitHub ✅
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PART 3 — رفع على Railway
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## الخطوة 12 — عمل Railway Account
+
+1. روح https://railway.app
+2. اضغط "Login"
+3. اختر "Login with GitHub" ← مهم إنك تدخل بـ GitHub
+
+
+## الخطوة 13 — عمل Project جديد على Railway
+
+1. بعد الدخول اضغط "New Project"
+2. اختر "Deploy from GitHub repo"
+3. لو طلب منك إذن، اضغط "Configure GitHub App" واديه إذن
+4. هتشوف الـ repositories بتاعتك
+5. اختر "blood-donation-chatbot"
+6. اضغط "Deploy Now"
+
+
+## الخطوة 14 — إضافة Environment Variables (مهم جداً)
+
+بعد ما الـ project يتعمل:
+
+1. اضغط على الـ service بتاعك (الكارت اللي ظهر)
+2. روح على تاب "Variables"
+3. اضغط "New Variable" وأضف المتغيرات دي واحد واحد:
+
+   ┌─────────────────────┬──────────────────────────────────────┐
+   │ Variable Name       │ Value                                │
+   ├─────────────────────┼──────────────────────────────────────┤
+   │ GEMINI_API_KEY      │ AIzaSy... (الـ key من Google)        │
+   │ CHATBOT_API_KEY     │ blood-donation-secret-key-2025       │
+   └─────────────────────┴──────────────────────────────────────┘
+
+4. بعد كل variable اضغط Enter أو علامة الصح ✓
+
+
+## الخطوة 15 — الحصول على Gemini API Key (لو مش عندك)
+
+1. روح https://aistudio.google.com
+2. سجل دخول بـ Google Account
+3. اضغط "Get API Key"
+4. اضغط "Create API key"
+5. انسخ الـ Key (هيبدأ بـ AIzaSy...)
+6. حطه في Railway كما في الخطوة 14
+
+
+## الخطوة 16 — إعادة الـ Deploy
+
+بعد إضافة الـ Variables:
+1. روح تاب "Deployments"
+2. اضغط "Redeploy" على آخر deployment
+3. انتظر دقيقتين
+
+
+## الخطوة 17 — الحصول على الـ URL
+
+1. روح تاب "Settings"
+2. في قسم "Networking" اضغط "Generate Domain"
+3. هتاخد URL زي:
+   https://blood-donation-chatbot-production.up.railway.app
+
+ده هو الـ URL اللي هتستخدمه في الـ .NET
+
+
+## الخطوة 18 — اختبر إن كل حاجة شغالة
+
+افتح المتصفح وروح على:
+
+    https://your-app.up.railway.app/health
+
+المفروض يظهر:
+    {
+      "status": "healthy",
+      "mode": "hybrid",
+      "gemini": true
+    }
+
+وللـ Swagger UI (لاختبار الـ endpoints):
+    https://your-app.up.railway.app/docs
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PART 4 — ربط الـ .NET بالـ Railway URL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## في Program.cs بدّل السطر ده:
+
+    // قبل (local)
+    client.BaseAddress = new Uri("http://localhost:8000");
+
+    // بعد (Railway)
+    client.BaseAddress = new Uri("https://your-app.up.railway.app");
+
+وخلّي الـ API key نفسه:
+    client.DefaultRequestHeaders.Add("x-api-key", "blood-donation-secret-key-2025");
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PART 5 — لما تعمل تعديل على الكود
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+في كل مرة تعدل الكود وتعايز ترفع التعديلات:
+
+    git add .
+    git commit -m "وصف التعديل اللي عملته"
+    git push
+
+Railway هيلاحظ التغيير تلقائياً ويعمل redeploy لوحده ✅
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# مشاكل شائعة وحلها
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+المشكلة: "git is not recognized"
+الحل: ثبّت Git من git-scm.com وأعد تشغيل CMD
+
+المشكلة: "Authentication failed" عند الـ push
+الحل: استخدم الـ Personal Access Token مش الـ password
+
+المشكلة: Railway بيقول "Build failed"
+الحل: روح Deployments → اضغط على الـ deployment الفاشل → شوف الـ logs
+
+المشكلة: "/health" بيرجع "gemini: false"
+الحل: تأكد إنك أضفت GEMINI_API_KEY في Variables وعملت Redeploy
+
+المشكلة: "403 Invalid API key" من الـ .NET
+الحل: تأكد إن CHATBOT_API_KEY في Railway نفس القيمة في الـ .NET code
