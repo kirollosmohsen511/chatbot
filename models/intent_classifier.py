@@ -109,7 +109,7 @@ class IntentClassifier:
         confidence = scores[best_intent]
 
         # If confidence is too low, return unknown
-        if confidence < 0.30:
+        if confidence < 0.20:
             best_intent = "unknown"
 
         return {
