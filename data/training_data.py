@@ -5,22 +5,22 @@ Arabic (Fusha + Egyptian Colloquial) + English
 
 TRAINING_DATA = [
 
-    # ─────────────────────────────────────────────
-    # Intent: ELIGIBILITY_CHECK
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # ELIGIBILITY_CHECK
+    # ══════════════════════════════════════════════
     # فصحى
     ("هل أقدر أتبرع بالدم؟", "eligibility_check"),
-    ("ينفع أتبرع؟", "eligibility_check"),
     ("هل أنا مؤهل للتبرع؟", "eligibility_check"),
-    ("عايز أعرف لو أقدر أتبرع", "eligibility_check"),
     ("هل يجوز لي التبرع بالدم؟", "eligibility_check"),
     ("ممكن أتبرع بالدم؟", "eligibility_check"),
-    ("أنا عايز أتبرع هل فيه مشكلة؟", "eligibility_check"),
     ("هل عمري مناسب للتبرع؟", "eligibility_check"),
     ("هل وزني كافي للتبرع؟", "eligibility_check"),
+    ("هل يمكنني التبرع؟", "eligibility_check"),
+    ("ما هي شروط التبرع بالدم؟", "eligibility_check"),
     # عامية مصرية
     ("اتبرع ولا ايه؟", "eligibility_check"),
     ("ينفعلي اتبرع بالدم؟", "eligibility_check"),
+    ("ينفع أتبرع؟", "eligibility_check"),
     ("عايز اتبرع بس مش عارف هعرف ولا لا", "eligibility_check"),
     ("ممكن اعمل تبرع دم؟", "eligibility_check"),
     ("اقدر اتبرع بالدم؟", "eligibility_check"),
@@ -30,44 +30,90 @@ TRAINING_DATA = [
     ("عايز اعرف لو اقدر اتبرع ولا لا", "eligibility_check"),
     ("مؤهل للتبرع بالدم؟", "eligibility_check"),
     ("اتبرع بالدم ينفع؟", "eligibility_check"),
+    ("عايز أعرف لو أقدر أتبرع", "eligibility_check"),
+    ("أنا عايز أتبرع هل فيه مشكلة؟", "eligibility_check"),
+    ("هل انا مناسب للتبرع؟", "eligibility_check"),
+    ("ينفع اتبرع بالدم؟", "eligibility_check"),
+    ("عايز اتبرع ممكن؟", "eligibility_check"),
+    ("التبرع بالدم مسموحلي؟", "eligibility_check"),
+    ("انا اتبرع ينفع ولا لا؟", "eligibility_check"),
+    ("لو هتبرع بالدم في شروط؟", "eligibility_check"),
+    ("شروط التبرع بالدم ايه؟", "eligibility_check"),
+    ("المتطلبات عشان اتبرع ايه؟", "eligibility_check"),
+    ("ايه المواصفات اللي لازم تتوافر عشان اتبرع؟", "eligibility_check"),
+    # أخطاء إملائية شائعة
+    ("هل اقدر اتبرع بالدمم؟", "eligibility_check"),
+    ("ينفع اتبراع بالدم؟", "eligibility_check"),
+    ("هل انا مؤهل للتبراع؟", "eligibility_check"),
     # English
     ("can I donate blood?", "eligibility_check"),
     ("am I eligible to donate?", "eligibility_check"),
     ("can I give blood?", "eligibility_check"),
     ("is it safe for me to donate?", "eligibility_check"),
+    ("am I fit to donate blood?", "eligibility_check"),
+    ("what are the requirements to donate blood?", "eligibility_check"),
+    ("do I qualify to donate?", "eligibility_check"),
+    ("can I be a blood donor?", "eligibility_check"),
 
-    # ─────────────────────────────────────────────
-    # Intent: DONATION_PROCESS
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # DONATION_PROCESS
+    # ══════════════════════════════════════════════
+    # فصحى
     ("إزاي أتبرع بالدم؟", "donation_process"),
     ("خطوات التبرع بالدم إيه؟", "donation_process"),
     ("عايز أعرف عملية التبرع", "donation_process"),
     ("ايه اللي بيحصل وأنا بتبرع؟", "donation_process"),
     ("بيعملوا إيه في التبرع؟", "donation_process"),
     ("كيف تتم عملية التبرع؟", "donation_process"),
+    ("ما هي خطوات التبرع بالدم؟", "donation_process"),
     # عامية
     ("ازاي اتبرع بالدم؟", "donation_process"),
+    ("ازاي اتبرع بالدمم", "donation_process"),
+    ("كيف اتبرع بالدم", "donation_process"),
+    ("كيف اتبرع", "donation_process"),
+    ("طريقة التبرع بالدم ايه؟", "donation_process"),
+    ("عايز اتبرع بالدم ازاي؟", "donation_process"),
+    ("اتبرع بالدم ازاي؟", "donation_process"),
+    ("مش عارف اتبرع ازاي", "donation_process"),
+    ("شرحلي عملية التبرع", "donation_process"),
+    ("هتاخدوا مني ايه لما اتبرع؟", "donation_process"),
+    ("لو هتبرع بالدم هيعملوا ايه؟", "donation_process"),
     ("التبرع بالدم بيتعمل ازاي؟", "donation_process"),
     ("هيعملوا ايه فيا لما اتبرع؟", "donation_process"),
     ("عملية التبرع بالدم بتاخد قد ايه؟", "donation_process"),
     ("خطوات التبرع ايه هي؟", "donation_process"),
     ("مش فاهم التبرع بيتعمل ازاي", "donation_process"),
     ("التبرع بيأخد وقت قد ايه؟", "donation_process"),
+    ("التبرع بيتعمل فين؟", "donation_process"),
+    ("عايز اتبرع ازاي؟", "donation_process"),
+    ("ايه خطوات التبرع بالدم؟", "donation_process"),
+    ("التبرع بالدم بيستغرق قد ايه؟", "donation_process"),
+    ("بعد ما اتبرع بيحصل ايه؟", "donation_process"),
+    ("هيسحبوا مني قد ايه دم؟", "donation_process"),
+    ("عملية التبرع مؤلمة؟", "donation_process"),
+    ("التبرع بالدم بيتم ازاي؟", "donation_process"),
     # English
     ("how do I donate blood?", "donation_process"),
     ("what is the blood donation process?", "donation_process"),
     ("what happens during donation?", "donation_process"),
     ("steps to donate blood", "donation_process"),
+    ("walk me through blood donation", "donation_process"),
+    ("how long does blood donation take?", "donation_process"),
+    ("what do they do during donation?", "donation_process"),
+    ("describe the donation process", "donation_process"),
 
-    # ─────────────────────────────────────────────
-    # Intent: BEFORE_DONATION
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # BEFORE_DONATION
+    # ══════════════════════════════════════════════
+    # فصحى
     ("لازم آكل قبل التبرع؟", "before_donation"),
     ("إيه اللي لازم أعمله قبل التبرع؟", "before_donation"),
     ("هل لازم أصحى على صايم؟", "before_donation"),
     ("إيه الأكل المناسب قبل التبرع؟", "before_donation"),
     ("هل أشرب مية قبل التبرع؟", "before_donation"),
     ("نصائح قبل التبرع", "before_donation"),
+    ("كيف أستعد للتبرع بالدم؟", "before_donation"),
+    ("ما الذي يجب فعله قبل التبرع؟", "before_donation"),
     # عامية
     ("لازم ياكل ايه قبل ما اتبرع؟", "before_donation"),
     ("هاكل قبل التبرع ولا لا؟", "before_donation"),
@@ -77,20 +123,35 @@ TRAINING_DATA = [
     ("ايه اللي هعمله قبل التبرع؟", "before_donation"),
     ("بستعد ازاي للتبرع؟", "before_donation"),
     ("ايه نصايح قبل التبرع؟", "before_donation"),
+    ("قبل التبرع بالدم لازم اعمل ايه؟", "before_donation"),
+    ("ايه اللي ممنوع آكله قبل التبرع؟", "before_donation"),
+    ("لازم انام كويس قبل التبرع؟", "before_donation"),
+    ("ممكن اشرب قهوة قبل التبرع؟", "before_donation"),
+    ("ممكن اشرب شاي قبل التبرع؟", "before_donation"),
+    ("لازم اجيب بطاقة معايا؟", "before_donation"),
+    ("استعداد للتبرع بالدم ازاي؟", "before_donation"),
+    ("هعمل ايه قبل التبرع؟", "before_donation"),
     # English
     ("what should I eat before donating?", "before_donation"),
     ("how to prepare for blood donation?", "before_donation"),
     ("should I fast before donating?", "before_donation"),
     ("what to do before blood donation?", "before_donation"),
+    ("can I drink coffee before donating?", "before_donation"),
+    ("tips before blood donation", "before_donation"),
+    ("what to avoid before donating blood?", "before_donation"),
+    ("should I drink water before donating?", "before_donation"),
 
-    # ─────────────────────────────────────────────
-    # Intent: AFTER_DONATION
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # AFTER_DONATION
+    # ══════════════════════════════════════════════
+    # فصحى
     ("إيه اللي أعمله بعد التبرع؟", "after_donation"),
     ("بعد ما أتبرع أعمل إيه؟", "after_donation"),
     ("هل هحس بتعب بعد التبرع؟", "after_donation"),
     ("ايه الأكل المناسب بعد التبرع؟", "after_donation"),
     ("نصائح بعد التبرع", "after_donation"),
+    ("كيف أتعافى بعد التبرع؟", "after_donation"),
+    ("متى يرجع الدم بعد التبرع؟", "after_donation"),
     # عامية
     ("بعد التبرع اعمل ايه؟", "after_donation"),
     ("هحس بايه بعد التبرع؟", "after_donation"),
@@ -100,20 +161,35 @@ TRAINING_DATA = [
     ("هيجيلي دوخة بعد التبرع؟", "after_donation"),
     ("لازم ارتاح بعد التبرع قد ايه؟", "after_donation"),
     ("ايه نصايح بعد التبرع؟", "after_donation"),
+    ("بعد التبرع ارجع الشغل ولا لا؟", "after_donation"),
+    ("بعد التبرع اقدر العب رياضة؟", "after_donation"),
+    ("الدم بيرجع بعد التبرع في قد ايه؟", "after_donation"),
+    ("بعد التبرع هحس بضعف؟", "after_donation"),
+    ("بعد التبرع اشرب ايه؟", "after_donation"),
+    ("ممكن اروح الشغل بعد التبرع؟", "after_donation"),
+    ("اقدر اسوق بعد التبرع؟", "after_donation"),
+    ("بعد التبرع بكام ساعة اقدر اتحرك؟", "after_donation"),
     # English
     ("what to do after donating blood?", "after_donation"),
     ("how to recover after blood donation?", "after_donation"),
     ("will I feel weak after donating?", "after_donation"),
     ("what should I eat after donation?", "after_donation"),
+    ("can I exercise after donating blood?", "after_donation"),
+    ("how long to rest after blood donation?", "after_donation"),
+    ("tips after blood donation", "after_donation"),
+    ("can I drive after donating blood?", "after_donation"),
+    ("when can I go back to work after donation?", "after_donation"),
 
-    # ─────────────────────────────────────────────
-    # Intent: FREQUENCY
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # FREQUENCY
+    # ══════════════════════════════════════════════
+    # فصحى
     ("كل قد إيه أقدر أتبرع؟", "frequency"),
     ("متى أقدر أتبرع تاني؟", "frequency"),
     ("كم مرة في السنة ممكن أتبرع؟", "frequency"),
     ("الفترة بين التبرعات كام يوم؟", "frequency"),
     ("كم يوم بين كل تبرع وتاني؟", "frequency"),
+    ("المدة المسموح بيها بين التبرعات", "frequency"),
     # عامية
     ("اتبرع تاني امتى؟", "frequency"),
     ("بعد كام يوم اقدر اتبرع تاني؟", "frequency"),
@@ -122,19 +198,31 @@ TRAINING_DATA = [
     ("بين التبرع والتاني كام يوم؟", "frequency"),
     ("اقدر اتبرع كل شهر؟", "frequency"),
     ("امتى يجيلي دور اتبرع تاني؟", "frequency"),
+    ("اتبرع الاسبوع اللي فات اتبرع تاني امتى؟", "frequency"),
+    ("قبل التبرع التاني لازم انتظر قد ايه؟", "frequency"),
+    ("ممكن اتبرع كل اسبوع؟", "frequency"),
+    ("التبرع كل اسبوعين مضر؟", "frequency"),
+    ("في حد يتبرع اكتر من مرة في الشهر؟", "frequency"),
+    ("اتبرع قبل كده بشهر اتبرع تاني؟", "frequency"),
     # English
     ("how often can I donate blood?", "frequency"),
     ("when can I donate again?", "frequency"),
     ("how many times per year can I donate?", "frequency"),
     ("what is the waiting period between donations?", "frequency"),
+    ("can I donate every month?", "frequency"),
+    ("how many days between donations?", "frequency"),
+    ("minimum time between blood donations?", "frequency"),
+    ("I donated last month can I donate again?", "frequency"),
 
-    # ─────────────────────────────────────────────
-    # Intent: BLOOD_TYPES
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # BLOOD_TYPES
+    # ══════════════════════════════════════════════
+    # فصحى
     ("فصائل الدم إيه؟", "blood_types"),
     ("إيه الفرق بين فصائل الدم؟", "blood_types"),
     ("مين يقدر ياخد من مين؟", "blood_types"),
     ("فصيلة O+ تتبرع لمين؟", "blood_types"),
+    ("ايه فصيلة الدم الأكثر طلباً؟", "blood_types"),
     # عامية
     ("فصيلة دمي ايه معناها؟", "blood_types"),
     ("فصايل الدم ايه هي؟", "blood_types"),
@@ -143,6 +231,15 @@ TRAINING_DATA = [
     ("فصيلة AB تاخد من مين؟", "blood_types"),
     ("فصيلة دمي نادرة؟", "blood_types"),
     ("ايه اكتر فصيلة دم مطلوبة؟", "blood_types"),
+    ("فصيلة B+ تتبرع لمين؟", "blood_types"),
+    ("فصيلة A+ تاخد من مين؟", "blood_types"),
+    ("O سالب يتبرع لمين؟", "blood_types"),
+    ("ايه الفرق بين + و -؟", "blood_types"),
+    ("فصيلة دمي AB+ تتبرع لمين؟", "blood_types"),
+    ("توافق فصائل الدم ازاي بيشتغل؟", "blood_types"),
+    ("مين يقدر ياخد من فصيلة O؟", "blood_types"),
+    ("فصيلة دمي نادرة ايه؟", "blood_types"),
+    ("ايه اندر فصيلة دم؟", "blood_types"),
     # English
     ("what are blood types?", "blood_types"),
     ("who can donate to whom?", "blood_types"),
@@ -150,14 +247,20 @@ TRAINING_DATA = [
     ("blood type compatibility", "blood_types"),
     ("O negative universal donor", "blood_types"),
     ("AB blood type", "blood_types"),
+    ("what blood type can donate to everyone?", "blood_types"),
+    ("blood type chart", "blood_types"),
+    ("which blood type is rarest?", "blood_types"),
+    ("can O+ donate to A+?", "blood_types"),
 
-    # ─────────────────────────────────────────────
-    # Intent: HEALTH_CONDITIONS
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # HEALTH_CONDITIONS
+    # ══════════════════════════════════════════════
+    # فصحى
     ("هل أقدر أتبرع وأنا عندي سكر؟", "health_conditions"),
     ("مريض ضغط ينفع يتبرع؟", "health_conditions"),
     ("هل أتبرع وأنا بآخد دواء؟", "health_conditions"),
     ("عندي أنيميا هل أتبرع؟", "health_conditions"),
+    ("هل الأمراض المزمنة تمنع التبرع؟", "health_conditions"),
     ("مريض قلب يتبرع؟", "health_conditions"),
     ("هل السرطان يمنع التبرع؟", "health_conditions"),
     # عامية
@@ -171,16 +274,37 @@ TRAINING_DATA = [
     ("باخد حبوب منع حمل اتبرع؟", "health_conditions"),
     ("عندي مشكلة في الغدة اتبرع؟", "health_conditions"),
     ("عندي التهاب اتبرع؟", "health_conditions"),
+    ("عندي حساسية اتبرع؟", "health_conditions"),
+    ("باخد مضادات حيوية اتبرع؟", "health_conditions"),
+    ("عندي فيروس سي اتبرع؟", "health_conditions"),
+    ("عندي التهاب كبد اتبرع؟", "health_conditions"),
+    ("عندي مرض مزمن اتبرع؟", "health_conditions"),
+    ("باخد انسولين اتبرع؟", "health_conditions"),
+    ("عندي كوليسترول اتبرع؟", "health_conditions"),
+    ("عندي دوالي اتبرع؟", "health_conditions"),
+    ("عندي جلطة قبل كده اتبرع؟", "health_conditions"),
+    ("مريض صرع اتبرع؟", "health_conditions"),
+    ("عندي قصور كلوي اتبرع؟", "health_conditions"),
+    ("باخد مسكنات اتبرع؟", "health_conditions"),
+    ("عندي امراض جلدية اتبرع؟", "health_conditions"),
     # English
     ("can diabetics donate blood?", "health_conditions"),
     ("can I donate if I take medication?", "health_conditions"),
     ("does high blood pressure prevent donation?", "health_conditions"),
     ("can anemic people donate?", "health_conditions"),
     ("I have asthma can I donate?", "health_conditions"),
+    ("can I donate if I have hepatitis?", "health_conditions"),
+    ("can cancer patients donate blood?", "health_conditions"),
+    ("I take blood thinners can I donate?", "health_conditions"),
+    ("I have a chronic illness can I donate?", "health_conditions"),
+    ("can I donate while on antibiotics?", "health_conditions"),
+    ("can I donate blood with thyroid disease?", "health_conditions"),
+    ("I had a heart attack can I donate?", "health_conditions"),
 
-    # ─────────────────────────────────────────────
-    # Intent: TATTOO_PIERCING
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # TATTOO_PIERCING
+    # ══════════════════════════════════════════════
+    # فصحى
     ("عندي تاتو هل أقدر أتبرع؟", "tattoo_piercing"),
     ("التاتو بيمنع التبرع بالدم؟", "tattoo_piercing"),
     ("عملت ثقب في أذني ينفع أتبرع؟", "tattoo_piercing"),
@@ -192,19 +316,34 @@ TRAINING_DATA = [
     ("بعد التاتو بكام اتبرع؟", "tattoo_piercing"),
     ("التاتو بيأثر على التبرع؟", "tattoo_piercing"),
     ("عملت رسم على جسمي اتبرع؟", "tattoo_piercing"),
+    ("عملت تاتو امبارح اتبرع؟", "tattoo_piercing"),
+    ("عندي تاتو قديم اتبرع؟", "tattoo_piercing"),
+    ("الثقب في الانف بيمنع التبرع؟", "tattoo_piercing"),
+    ("عملت ثقب في لساني اتبرع؟", "tattoo_piercing"),
+    ("عملت تاتو حواجب اتبرع؟", "tattoo_piercing"),
+    ("الوشم بيمنع التبرع؟", "tattoo_piercing"),
+    ("عملت ثقب من سنة اتبرع؟", "tattoo_piercing"),
+    ("التاتو الطبي بيمنع التبرع؟", "tattoo_piercing"),
     # English
     ("can I donate if I have a tattoo?", "tattoo_piercing"),
     ("tattoo and blood donation", "tattoo_piercing"),
     ("piercing and blood donation", "tattoo_piercing"),
     ("how long after tattoo can I donate?", "tattoo_piercing"),
+    ("I got a tattoo last month can I donate?", "tattoo_piercing"),
+    ("does having a piercing affect blood donation?", "tattoo_piercing"),
+    ("tattoo waiting period for blood donation", "tattoo_piercing"),
 
-    # ─────────────────────────────────────────────
-    # Intent: PREGNANCY
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # PREGNANCY
+    # ══════════════════════════════════════════════
+    # فصحى
     ("هل الحامل تتبرع؟", "pregnancy"),
     ("أنا حامل ينفع أتبرع؟", "pregnancy"),
     ("بعد الولادة بقد إيه أتبرع؟", "pregnancy"),
     ("المرضعة تتبرع بالدم؟", "pregnancy"),
+    ("can pregnant women donate blood?", "pregnancy"),
+    ("can I donate while breastfeeding?", "pregnancy"),
+    ("how long after pregnancy can I donate?", "pregnancy"),
     # عامية
     ("انا حامل اتبرع؟", "pregnancy"),
     ("حامل واتبرع ينفع؟", "pregnancy"),
@@ -212,18 +351,22 @@ TRAINING_DATA = [
     ("بترضع اتبرع بالدم؟", "pregnancy"),
     ("في فترة الرضاعة اتبرع؟", "pregnancy"),
     ("ولدت من شهر اتبرع؟", "pregnancy"),
-    # English
-    ("can pregnant women donate blood?", "pregnancy"),
-    ("can I donate while breastfeeding?", "pregnancy"),
-    ("how long after pregnancy can I donate?", "pregnancy"),
+    ("جنيني في بطني اتبرع؟", "pregnancy"),
+    ("حامل في الشهر الاول اتبرع؟", "pregnancy"),
+    ("بعد الولادة بكام شهر اتبرع؟", "pregnancy"),
+    ("خلصت الرضاعة اتبرع امتى؟", "pregnancy"),
+    ("عملت اجهاض اتبرع؟", "pregnancy"),
+    ("عندي اطفال صغيرين وبرضعهم اتبرع؟", "pregnancy"),
 
-    # ─────────────────────────────────────────────
-    # Intent: BENEFITS
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # BENEFITS
+    # ══════════════════════════════════════════════
+    # فصحى
     ("إيه فوائد التبرع بالدم؟", "benefits"),
     ("التبرع بالدم بيفيد إيه؟", "benefits"),
     ("هل التبرع بالدم مفيد للمتبرع؟", "benefits"),
     ("ليه أتبرع بالدم؟", "benefits"),
+    ("فوائد التبرع على الصحة", "benefits"),
     # عامية
     ("التبرع بالدم بيفيد ايه؟", "benefits"),
     ("ايه الفايدة من التبرع بالدم؟", "benefits"),
@@ -231,20 +374,31 @@ TRAINING_DATA = [
     ("التبرع بالدم كويس للصحة؟", "benefits"),
     ("هيجيلي ايه من التبرع بالدم؟", "benefits"),
     ("فايدة التبرع بالدم ايه؟", "benefits"),
+    ("التبرع بالدم بيساعد الصحة؟", "benefits"),
+    ("ايه الفايدة اللي هجيبها من التبرع؟", "benefits"),
+    ("التبرع بالدم بيحسن صحتي؟", "benefits"),
+    ("في فوايد صحية للتبرع؟", "benefits"),
+    ("التبرع بالدم بيقلل الوزن؟", "benefits"),
+    ("التبرع بالدم بيفيد القلب؟", "benefits"),
     # English
     ("what are the benefits of donating blood?", "benefits"),
     ("is blood donation good for health?", "benefits"),
     ("does donating blood have health benefits?", "benefits"),
     ("why should I donate blood?", "benefits"),
+    ("does donating blood burn calories?", "benefits"),
+    ("health benefits of giving blood", "benefits"),
+    ("is it good to donate blood regularly?", "benefits"),
 
-    # ─────────────────────────────────────────────
-    # Intent: SAFETY
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # SAFETY
+    # ══════════════════════════════════════════════
+    # فصحى
     ("هل التبرع بالدم آمن؟", "safety"),
     ("خايف من التبرع بالدم", "safety"),
     ("هل فيه مخاطر من التبرع؟", "safety"),
     ("هل الإبرة بتوجع؟", "safety"),
     ("هل ممكن أتعدى بمرض من التبرع؟", "safety"),
+    ("التبرع بالدم بيأثر على صحتي؟", "safety"),
     # عامية
     ("التبرع بالدم آمن؟", "safety"),
     ("خايف اتبرع بالدم", "safety"),
@@ -254,19 +408,32 @@ TRAINING_DATA = [
     ("التبرع بيأذي؟", "safety"),
     ("في خطر من التبرع بالدم؟", "safety"),
     ("التبرع مضر ولا لا؟", "safety"),
+    ("الابرة بتوجع في التبرع؟", "safety"),
+    ("ممكن يتعدالي مرض من التبرع؟", "safety"),
+    ("الدم الجديد هيتعوض ازاي؟", "safety"),
+    ("التبرع بالدم بيضعف الجسم؟", "safety"),
+    ("ممكن اموت من التبرع بالدم؟", "safety"),
+    ("التبرع بالدم بيأثر على المناعة؟", "safety"),
+    ("في ناس ماتت من التبرع بالدم؟", "safety"),
     # English
     ("is blood donation safe?", "safety"),
     ("are there risks in donating blood?", "safety"),
     ("I am scared to donate blood", "safety"),
     ("does donation hurt?", "safety"),
+    ("can you get a disease from donating blood?", "safety"),
+    ("is it dangerous to donate blood?", "safety"),
+    ("does blood donation weaken your immune system?", "safety"),
+    ("how safe is blood donation?", "safety"),
 
-    # ─────────────────────────────────────────────
-    # Intent: AGE_WEIGHT
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # AGE_WEIGHT
+    # ══════════════════════════════════════════════
+    # فصحى
     ("الحد الأدنى للسن للتبرع كام؟", "age_weight"),
     ("أنا عندي 17 سنة أقدر أتبرع؟", "age_weight"),
     ("كبار السن يتبرعوا؟", "age_weight"),
     ("الوزن المطلوب للتبرع كام؟", "age_weight"),
+    ("الحد الأقصى للسن للتبرع", "age_weight"),
     # عامية
     ("عندي 16 سنة اتبرع ينفع؟", "age_weight"),
     ("عندي 17 سنة اتبرع بالدم؟", "age_weight"),
@@ -276,23 +443,36 @@ TRAINING_DATA = [
     ("سني كبير اتبرع بالدم؟", "age_weight"),
     ("عندي 60 سنة اتبرع؟", "age_weight"),
     ("الوزن الاقل للتبرع كام؟", "age_weight"),
+    ("عندي 15 سنة اتبرع؟", "age_weight"),
+    ("عندي 70 سنة اتبرع؟", "age_weight"),
+    ("الوزن المناسب للتبرع كام؟", "age_weight"),
+    ("وزني تقيل اتبرع؟", "age_weight"),
+    ("وزني خفيف اتبرع؟", "age_weight"),
+    ("عندي 18 سنة اتبرع؟", "age_weight"),
+    ("ايه السن المناسب للتبرع؟", "age_weight"),
+    ("لو عندي 20 سنة اتبرع؟", "age_weight"),
+    ("وزني 48 كيلو اتبرع؟", "age_weight"),
     # English
     ("what is the minimum age to donate?", "age_weight"),
     ("can teenagers donate blood?", "age_weight"),
     ("minimum weight to donate blood?", "age_weight"),
     ("I am 16 can I donate?", "age_weight"),
-    ("الحد الأقصى للسن للتبرع", "age_weight"),
+    ("I am 17 can I donate blood?", "age_weight"),
+    ("maximum age to donate blood?", "age_weight"),
+    ("I weigh 45kg can I donate?", "age_weight"),
+    ("age limit for blood donation?", "age_weight"),
+    ("can elderly people donate blood?", "age_weight"),
+    ("weight requirement for blood donation?", "age_weight"),
 
-    # ─────────────────────────────────────────────
-    # Intent: GREETING
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # GREETING
+    # ══════════════════════════════════════════════
     ("أهلاً", "greeting"),
     ("مرحباً", "greeting"),
     ("السلام عليكم", "greeting"),
     ("هاي", "greeting"),
     ("صباح الخير", "greeting"),
     ("مساء الخير", "greeting"),
-    # عامية
     ("ازيك", "greeting"),
     ("ازيك يا شاطر", "greeting"),
     ("هلو", "greeting"),
@@ -300,20 +480,27 @@ TRAINING_DATA = [
     ("ايه الاخبار", "greeting"),
     ("يسلمو", "greeting"),
     ("هاي كيفك", "greeting"),
-    # English
+    ("هلا", "greeting"),
+    ("اهلين", "greeting"),
+    ("مرحبا بيك", "greeting"),
+    ("صباح النور", "greeting"),
+    ("مساء النور", "greeting"),
+    ("وعليكم السلام", "greeting"),
+    ("ازيك انت عامل ايه؟", "greeting"),
     ("hello", "greeting"),
     ("hi", "greeting"),
     ("hey", "greeting"),
     ("good morning", "greeting"),
+    ("good evening", "greeting"),
+    ("hi there", "greeting"),
 
-    # ─────────────────────────────────────────────
-    # Intent: THANKS
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # THANKS
+    # ══════════════════════════════════════════════
     ("شكراً", "thanks"),
     ("شكرا جزيلاً", "thanks"),
     ("متشكر", "thanks"),
     ("جزاك الله خيراً", "thanks"),
-    # عامية
     ("تسلم", "thanks"),
     ("مشكور", "thanks"),
     ("تسلم ايدك", "thanks"),
@@ -321,17 +508,31 @@ TRAINING_DATA = [
     ("شكرا جدا", "thanks"),
     ("الف شكر", "thanks"),
     ("شكرا يسطا", "thanks"),
-    # English
+    ("شكرا يا صديقي", "thanks"),
+    ("جزاكم الله خيرا", "thanks"),
+    ("ميرسي", "thanks"),
+    ("ميرسي اوي", "thanks"),
+    ("شكرا على المساعدة", "thanks"),
+    ("تمام شكرا", "thanks"),
+    ("كويس شكرا", "thanks"),
     ("thanks", "thanks"),
     ("thank you", "thanks"),
     ("thanks a lot", "thanks"),
+    ("thank you so much", "thanks"),
+    ("appreciate it", "thanks"),
+    ("many thanks", "thanks"),
 
-    # ─────────────────────────────────────────────
-    # Intent: UNKNOWN
-    # ─────────────────────────────────────────────
+    # ══════════════════════════════════════════════
+    # UNKNOWN
+    # ══════════════════════════════════════════════
     ("كلام عشوائي", "unknown"),
     ("لا أعرف", "unknown"),
     ("random text here 123", "unknown"),
     ("مش فاهم", "unknown"),
     ("اللي انت شايفه", "unknown"),
+    ("في الكرة امبارح ايه اللي حصل؟", "unknown"),
+    ("ايه اخبار الاهلي؟", "unknown"),
+    ("ايه رأيك في السياسة؟", "unknown"),
+    ("عايز تتكلم؟", "unknown"),
+    ("بتشتغل ايه؟", "unknown"),
 ]
