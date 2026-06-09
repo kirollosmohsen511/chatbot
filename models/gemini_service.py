@@ -77,7 +77,7 @@ class GeminiService:
             )
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",   # Free tier, fast
+            model_name="gemini-2.0-flash",   # Free tier, fast
             system_instruction=BLOOD_DONATION_SYSTEM_PROMPT,
             generation_config=genai.GenerationConfig(
                 temperature=0.4,      # Low = more consistent medical answers
