@@ -24,8 +24,8 @@ from models.gemini_service import GeminiService
 logger = logging.getLogger(__name__)
 
 # ── Confidence thresholds ────────────────────
-HIGH_CONF   = 0.70   # Pure static
-MEDIUM_CONF = 0.40   # Static + Gemini enhance
+HIGH_CONF   = 0.50   # Pure static
+MEDIUM_CONF = 0.20   # Static + Gemini enhance
 
 
 @dataclass
